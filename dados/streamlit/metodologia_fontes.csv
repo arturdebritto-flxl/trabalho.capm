@@ -1,0 +1,7 @@
+Item,Descricao,Fonte,Limitacao
+Embraer,Preços de fechamento da Embraer combinando EMBR3 e EMBJ3 no mercado à vista.,Arquivos históricos COTAHIST da B3 em dados/cotacoes_b3/.,"Preços da B3 não ajustados por dividendos, bonificações ou outros proventos."
+Ibovespa,Proxy de mercado da análise CAPM.,"Yahoo Finance, ticker ^BVSP, via yfinance.",Sujeito à disponibilidade e eventuais revisões do provedor.
+Selic,Taxa livre de risco mensal.,"Banco Central do Brasil, série SGS 4390.",Usada como proxy mensal da taxa livre de risco.
+Beta,"Beta principal calculado por covariância(retorno da ação, retorno do mercado) / variância(retorno do mercado).",Cálculo próprio em Python com os 60 retornos mensais.,Beta externo publicado é mantido apenas como referência comparativa.
+Aviso,Aplicação acadêmica do CAPM à Embraer.,Projeto Python e relatório Word do repositório.,Não constitui recomendação financeira definitiva.
+Construção da série,"Série de preços de fechamento da Embraer obtida nos arquivos COTAHIST da B3, combinando EMBR3 e EMBJ3. Os preços da B3 não são ajustados por dividendos, bonificações ou outros proventos, o que constitui limitação metodológica da análise.",Processamento Python do projeto.,Dezembro/2020 é usado apenas como preço-base para o retorno de janeiro/2021.

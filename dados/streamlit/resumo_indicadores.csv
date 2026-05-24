@@ -1,0 +1,19 @@
+Grupo,Indicador,ValorNumerico,ValorFormatado,Unidade,Observacao
+Risco,Beta calculado usado no CAPM,0.08815543115893762,0.0882,decimal,Calculado no Python por covariância/variância.
+Referência,Beta publicado apenas para referência,0.82,0.8200,decimal,Não utilizado no CAPM final.
+Risco,Covariância ação-mercado,0.00020748827207116443,0.00020749,decimal,Covariância entre retorno da ação e retorno do mercado.
+Risco,Variância do mercado,0.0023536640833515823,0.00235366,decimal,Variância dos retornos do Ibovespa.
+Regressão,Beta da regressão com retornos excedentes,0.10996883410455871,0.1100,decimal,Diagnóstico complementar.
+Regressão,Alfa,0.03781827139260453,0.0378,decimal,Alfa da regressão mensal.
+Regressão,R²,0.0017741153969689553,0.0018,decimal,Coeficiente de determinação da regressão.
+Retorno,Retorno médio mensal da ação,0.04624708699746402,4.62%,% ao mês,Média dos 60 retornos mensais da Embraer.
+Retorno,Retorno médio mensal do mercado,0.0061800320608746484,0.62%,% ao mês,Média dos 60 retornos mensais do Ibovespa.
+Retorno,Selic média mensal,0.008706666666666666,0.87%,% ao mês,"Média da Selic mensal, série BCB 4390."
+CAPM,Retorno esperado CAPM mensal,0.008483930103611979,0.85%,% ao mês,Calculado no Python com o beta oficial da análise.
+CAPM,Diferença observado menos CAPM mensal,0.03776315689385204,3.78%,% ao mês,Retorno médio observado menos retorno esperado pelo CAPM.
+Retorno,Retorno anualizado da ação,0.7203275401753109,72.03%,% ao ano,Taxa anual equivalente a partir da média mensal.
+Retorno,Retorno anualizado do mercado,0.07673376572257307,7.67%,% ao ano,Taxa anual equivalente a partir da média mensal.
+Retorno,Selic anualizada,0.10963128746195405,10.96%,% ao ano,Taxa anual equivalente a partir da média mensal.
+CAPM,Retorno CAPM anualizado,0.1066945901217593,10.67%,% ao ano,Taxa anual equivalente a partir do CAPM mensal.
+Resultado,Recomendação final,,Compra,texto,Classificação calculada pelo Python.
+Base,Quantidade de retornos mensais,60.0,60,meses,Jan/2021 a dez/2025.
