@@ -130,8 +130,6 @@ Os nomes usam um slug seguro da analise:
 - `dados/graficos/regressao_capm_<slug>.png`
 - `dados/streamlit/<slug>/*.csv`
 
-Nao ha geracao de relatorio Word pelo codigo.
-
 ## Testes
 
 ```powershell
