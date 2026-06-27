@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capm-analysis"
+version = "0.1.0"
+description = "Ferramenta generica para analise CAPM academica."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "pandas>=2.2,<3.1",
+    "numpy>=1.26,<3.0",
+    "yfinance>=0.2.40,<2.0",
+    "matplotlib>=3.8,<4.0",
+    "XlsxWriter>=3.2,<4.0",
+    "streamlit>=1.36,<2.0",
+    "statsmodels>=0.14,<1.0",
+    "python-bcb>=0.3,<1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: testes de integracao offline ou de adaptadores",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"main.py" = ["E402"]
+"streamlit_app.py" = ["E402"]
+"src/capm/exports.py" = ["E402"]

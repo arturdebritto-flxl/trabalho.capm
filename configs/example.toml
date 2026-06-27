@@ -1,0 +1,19 @@
+asset_name = "Ativo Ficticio A"
+ticker = "FICT3"
+market = "MKT"
+start = "2024-01-01"
+end = "2024-12-31"
+price_source = "offline"
+risk_free_source = "csv"
+frequency = "monthly"
+annualization_method = "calendar_days"
+output_dir = "../dados"
+slug = "ativo_ficticio_a"
+asset_prices_csv = "../examples/offline/fict3_prices.csv"
+market_prices_csv = "../examples/offline/market_prices.csv"
+risk_free_csv = "../examples/offline/risk_free.csv"
+
+[presentation]
+title = "Analise CAPM"
+academic_classification = true
+disclaimer = "Classificacao academica para fins educacionais; nao constitui recomendacao financeira profissional."

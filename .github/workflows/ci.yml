@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+        python-version: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install -r requirements-dev.txt
+      - name: Validate
+        run: |
+          python -m pip check
+          ruff check . --no-cache
+          python -m pytest -q -p no:cacheprovider
+          python -m compileall main.py streamlit_app.py src tests
+      - name: Offline smoke
+        run: |
+          python main.py --config configs/example.toml --offline --yes
+          python main.py --config configs/embraer.toml --offline --yes
+      - name: Artifact validation
+        run: |
+          python -c "from pathlib import Path; files=['dados/analise_capm_ativo_ficticio_a.xlsx','dados/resultado_capm_ativo_ficticio_a.xlsx','dados/dados_capm_ativo_ficticio_a.xlsx','dados/graficos/retornos_mensais_ativo_ficticio_a.png','dados/graficos/regressao_capm_ativo_ficticio_a.png','dados/streamlit/ativo_ficticio_a/fato_capm_mensal.csv','dados/streamlit/ativo_ficticio_a/resumo_indicadores.csv','dados/streamlit/ativo_ficticio_a/metodologia_fontes.csv','dados/analise_capm_embraer.xlsx','dados/resultado_capm_embraer.xlsx','dados/dados_capm_embraer.xlsx','dados/graficos/retornos_mensais_embraer.png','dados/graficos/regressao_capm_embraer.png','dados/streamlit/embraer/fato_capm_mensal.csv','dados/streamlit/embraer/resumo_indicadores.csv','dados/streamlit/embraer/metodologia_fontes.csv']; missing=[f for f in files if not Path(f).is_file() or Path(f).stat().st_size == 0]; assert not missing, missing"
+      - name: Streamlit smoke
+        run: python tests/smoke_streamlit.py

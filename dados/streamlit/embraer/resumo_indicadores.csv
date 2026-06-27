@@ -1,0 +1,21 @@
+Grupo,Indicador,ValorNumerico,ValorFormatado,Unidade,Observacao
+Identificacao,Ativo,,Embraer S.A.,texto,Nome configurado do ativo.
+Identificacao,Ticker do ativo,,EMBJ3.SA,texto,Ticker usado para coleta ou rotulo.
+Identificacao,Ticker do mercado,,^BVSP,texto,Proxy de mercado da analise.
+Risco,Beta calculado usado no CAPM,0.4837907315345737,0.4838,decimal,Coeficiente angular da OLS dos retornos excedentes.
+Risco,Beta covariancia/variancia diagnostico,0.4876700017005128,0.4877,decimal,Diagnostico; nao usado como beta principal.
+Risco,Covariancia ativo-mercado,0.0018916660118072266,0.00189167,decimal,Diagnostico dos retornos mensais brutos.
+Risco,Variancia do mercado,0.003878987850823217,0.00387899,decimal,Diagnostico dos retornos mensais do mercado.
+Regressao,Alfa,0.015080772758971711,0.0151,decimal,Intercepto mensal da regressao.
+Regressao,R2,0.05745560680900341,0.0575,decimal,Coeficiente de determinacao.
+Retorno,Retorno anualizado do ativo,0.20658015947689834,20.66%,% ao ano,Calculado pelo periodo efetivo dos precos usados.
+Retorno,Retorno anualizado do mercado,0.08423247624736185,8.42%,% ao ano,Calculado pelo periodo efetivo dos precos usados.
+Retorno,Taxa livre anual media,0.08841770833333333,8.84%,% ao ano,"Media da serie anual informada, dividida por 100."
+Retorno,Taxa livre total no periodo,0.9573005985340794,95.73%,% periodo,Produto dos fatores mensais menos 1.
+CAPM,CAPM preciso anual,0.08639293184081923,8.64%,% ao ano,RF + beta * (RM - RF).
+CAPM,CAPM arredondado metodologia academica,0.086,8.60%,% ao ano,"round(CAPM preciso, 3)."
+CAPM,Valor usado na classificacao,0.086,8.60%,% ao ano,Classificacao academica usa o valor arredondado.
+CAPM,Diferenca observado menos CAPM academico,0.12058015947689835,12.06%,% ao ano,Retorno anualizado do ativo menos CAPM arredondado.
+Resultado,Classificacao academica,,Compra,texto,Classificacao academica para fins educacionais; nao constitui recomendacao financeira profissional.
+Base,Quantidade de retornos mensais,96.0,96,meses,Observacoes apos pct_change e alinhamento.
+Base,Periodo em anos,7.920547945205479,7.9205,anos,Dias entre as datas de precos efetivamente usadas dividido por 365.

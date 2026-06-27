@@ -1,0 +1,27 @@
+asset_name = "Embraer S.A."
+ticker = "EMBJ3.SA"
+market = "^BVSP"
+start = "2018-01-01"
+end = "2025-12-31"
+price_source = "offline"
+risk_free_source = "csv"
+frequency = "monthly"
+annualization_method = "calendar_days"
+output_dir = "../dados"
+slug = "embraer"
+asset_prices_csv = "../examples/offline/embraer_prices.csv"
+market_prices_csv = "../examples/offline/ibovespa_prices.csv"
+risk_free_csv = "../examples/offline/cdi.csv"
+
+[[ticker_history]]
+ticker = "EMBR3"
+end = "2025-10-31"
+
+[[ticker_history]]
+ticker = "EMBJ3"
+start = "2025-11-03"
+
+[presentation]
+title = "Analise CAPM - Exemplo academico"
+academic_classification = true
+disclaimer = "Classificacao academica para fins educacionais; nao constitui recomendacao financeira profissional."

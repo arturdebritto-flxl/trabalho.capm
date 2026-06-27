@@ -1,0 +1,5 @@
+Item,Descricao,Fonte,Limitacao
+Ativo,Precos de fechamento do ativo conforme fonte configurada.,offline,"Precos nao ajustados automaticamente por proventos, salvo escolha do provedor."
+Mercado,Proxy de mercado da analise CAPM.,^BVSP,Sujeito a disponibilidade da fonte configurada.
+Taxa livre de risco,Taxa anual convertida para taxa mensal nos retornos excedentes.,csv,Usada como proxy academica da taxa livre de risco.
+Aviso,Classificacao academica para fins educacionais; nao constitui recomendacao financeira profissional.,Projeto CAPM,Nao substitui analise profissional.
